@@ -16,15 +16,7 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    /* public UserService(){
-        UserRepository=new UserRepository();
-    }
-*/
-   /* public void printUser(){
-        System.out.println(UserRepository.getAllUser());
-    }
 
-    */
 
     public User createUser(User user) {
         return userRepository.save(user);
