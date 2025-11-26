@@ -5,6 +5,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import lombok.Data;
 
+import java.time.LocalDate;
+
 @Entity
 @Data
 public class Todo {
@@ -12,6 +14,6 @@ public class Todo {
     @GeneratedValue
     Integer id;
     String title;
-    // String description;
     Boolean isCompleted;
+    LocalDate date;
 }
