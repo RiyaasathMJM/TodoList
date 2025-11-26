@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-//@RequestMapping("api/v1/todo")
+@RequestMapping("/todo")
 
 public class TodoController {
 
@@ -25,20 +25,6 @@ public class TodoController {
     }
 
 
-
-    //Path variable
-    /*@GetMapping("/{name}")
-    String getTodoById(@PathVariable String name) {
-        return "Todo with name: " + name;
-    }
-
-    // Request Param
-    @GetMapping("")
-    String getTodoByName(@RequestParam("toDoId") int  id) {
-        return "ID: " + id;
-    }
-*/
-    // Username & Password
     @GetMapping("/create2")
     String getDetails(@RequestParam String userId,String password){
         return  "Username:" + userId+"  Password:"+password;
@@ -55,12 +41,7 @@ public class TodoController {
         return new ResponseEntity<>(todoService.updateTodo(todo), HttpStatus.OK);
 
     }
-
-    /* @DeleteMapping ("/{id}")
-     String DeleteToDoById(@PathVariable int id){
-         return "Delete with ID : " +id;
-     }
- */
+    
 //Create Todo
     @PostMapping("/create")
     ResponseEntity<Todo> createTodo(@RequestBody Todo todo){
