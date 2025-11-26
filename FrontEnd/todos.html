@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Your Todos</title>
     <link rel="stylesheet" href="style.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <h2>Your Todos</h2>
+      <h2>Your Todos</h2>
 
-        <div id="todo-list" class="todo-cards">
-            <p id="empty-message">Loading your todos...</p>
-        </div>
+      <div id="todo-list" class="todo-cards">
+        <p id="empty-message">Loading your todos...</p>
+      </div>
 
-        <div class="add-todo">
-            <input type="text" id="new-todo" placeholder="Add new todo" />
-            <button onclick="addTodos()">Add</button>
-        </div>
+      <div class="add-todo">
+        <input type="text" id="new-todo" placeholder="Add new todo" />
+        <input type="date" id="todo-date" />
+        <button onclick="addTodos()">Add</button>
+      </div>
     </div>
 
     <script src="script.js"></script>
-
-</body>
-
+  </body>
 </html>
